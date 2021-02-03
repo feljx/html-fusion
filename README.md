@@ -1,5 +1,5 @@
-# html-composer
-Create one HTML file out of multiple HTML files
+# html-fusion
+Fuse multiple HTML file into one
 
 ## Installation
 `npm i -D html-fusion`
