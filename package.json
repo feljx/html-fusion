@@ -1,6 +1,6 @@
 {
 	"name": "html-fusion",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "Fuse multiple HTML file into one",
 	"main": "src/main.js",
 	"bin": {
@@ -13,12 +13,23 @@
 		"type": "git",
 		"url": "git+https://github.com/flxsu/html-fusion.git"
 	},
-	"keywords": ["html","composer", "html-fusion", "compose", "merge", "fuse", "combine", "fusion"
+	"keywords": [
+		"html",
+		"composer",
+		"html-fusion",
+		"compose",
+		"merge",
+		"fuse",
+		"combine",
+		"fusion"
 	],
 	"author": "flxsu",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/flxsu/html-fusion/issues"
 	},
-	"homepage": "https://github.com/flxsu/html-fusion#readme"
+	"homepage": "https://github.com/flxsu/html-fusion#readme",
+	"dependencies": {
+		"chokidar": "^3.5.1"
+	}
 }
