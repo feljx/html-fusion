@@ -1,0 +1,24 @@
+{
+	"name": "html-composer",
+	"version": "0.1.0",
+	"description": "Create one HTML file out of multiple HTML files",
+	"main": "src/main.js",
+	"bin": {
+		"html-compose": "src/cli.js"
+	},
+	"scripts": {
+		"html-compose": "node src/cli.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/flxsu/html-composer.git"
+	},
+	"keywords": ["html","composer", "html-compose", "compose", "merge", "fuse", "combine"
+	],
+	"author": "flxsu",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/flxsu/html-composer/issues"
+	},
+	"homepage": "https://github.com/flxsu/html-composer#readme"
+}
