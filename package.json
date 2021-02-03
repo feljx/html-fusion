@@ -1,6 +1,6 @@
 {
 	"name": "html-fusion",
-	"version": "0.1.7",
+	"version": "0.1.8",
 	"description": "Fuse multiple HTML file into one",
 	"main": "src/main.js",
 	"bin": {
