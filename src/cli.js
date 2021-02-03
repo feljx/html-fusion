@@ -63,6 +63,7 @@ function initialize () {
 			watcher.on(eventType, () => process_file(path_in, path_out))
 		}
 	}
+	return [ path_in, path_out ]
 }
 
 const paths = initialize()
