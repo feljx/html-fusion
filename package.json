@@ -1,7 +1,7 @@
 {
 	"name": "html-fusion",
-	"version": "0.1.1",
-	"description": "Create one HTML file out of multiple HTML files",
+	"version": "0.1.2",
+	"description": "Fuse multiple HTML file into one",
 	"main": "src/main.js",
 	"bin": {
 		"fusion": "src/cli.js"
