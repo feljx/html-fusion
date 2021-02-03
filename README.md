@@ -6,6 +6,8 @@ Fuse multiple HTML files into one
 
 ## Usage
 `npx fusion <input_html> -o <output_html>`
+Watch for changes and fuse automatically
+`npx fusion <input_html> -o <output_html> -w <directory_to_watch>`
 
 ### Include other HTML files
 ```html
@@ -30,3 +32,5 @@ Fuse multiple HTML files into one
   <a>More stuff</a>
 <nav>
 ```
+
+`
