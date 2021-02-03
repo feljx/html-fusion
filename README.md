@@ -22,8 +22,7 @@ Create one HTML file out of multiple HTML files
 </body>
 ```
 
-### Included HTML files can be whatever you like
-```html
+### Example of an HTML include
 <!-- components/nav.html -->
 <nav>
   <a>Content</a>
