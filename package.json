@@ -1,24 +1,24 @@
 {
-	"name": "html-composer",
-	"version": "0.1.0",
+	"name": "html-fusion",
+	"version": "0.1.1",
 	"description": "Create one HTML file out of multiple HTML files",
 	"main": "src/main.js",
 	"bin": {
-		"html-compose": "src/cli.js"
+		"fusion": "src/cli.js"
 	},
 	"scripts": {
-		"html-compose": "node src/cli.js"
+		"fusion": "node src/cli.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/flxsu/html-composer.git"
+		"url": "git+https://github.com/flxsu/html-fusion.git"
 	},
-	"keywords": ["html","composer", "html-compose", "compose", "merge", "fuse", "combine"
+	"keywords": ["html","composer", "html-fusion", "compose", "merge", "fuse", "combine", "fusion"
 	],
 	"author": "flxsu",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/flxsu/html-composer/issues"
+		"url": "https://github.com/flxsu/html-fusion/issues"
 	},
-	"homepage": "https://github.com/flxsu/html-composer#readme"
+	"homepage": "https://github.com/flxsu/html-fusion#readme"
 }
