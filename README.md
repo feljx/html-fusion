@@ -23,6 +23,7 @@ Create one HTML file out of multiple HTML files
 ```
 
 ### Example of an HTML include
+```html
 <!-- components/nav.html -->
 <nav>
   <a>Content</a>
