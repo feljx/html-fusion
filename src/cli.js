@@ -13,7 +13,7 @@ function has_folder_format (arg) {
 	return arg && extname(arg) === ''
 }
 
-async function initialize () {
+function initialize () {
 	let path_in
 	let path_out
 	let path_watcher
