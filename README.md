@@ -1,13 +1,13 @@
 # html-composer
 Create one HTML file out of multiple HTML files
 
-Install
+## Installation
 `npm i -D html-fusion`
 
-Usage
+## Usage
 `npx fusion <input_html> -o <output_html>`
 
-Include other HTML files
+### Include other HTML files
 ```html
 <body>
   <!-- Include multiple HTML files (in same folder or in nested folders) -->
@@ -22,7 +22,7 @@ Include other HTML files
 </body>
 ```
 
-HTML includes can be whatever you like
+### Included HTML files can be whatever you like
 ```html
 <!-- components/nav.html -->
 <nav>
