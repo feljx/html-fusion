@@ -1,6 +1,10 @@
 # html-composer
 Create one HTML file out of multiple HTML files
 
+Install
+`npm i -D html-fusion`
+
+Usage
 `npx fusion <input_html> -o <output_html>`
 
 Include other HTML files
