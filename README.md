@@ -1,5 +1,5 @@
 # html-fusion
-Fuse multiple HTML file into one
+Fuse multiple HTML files into one
 
 ## Installation
 `npm i -D html-fusion`
