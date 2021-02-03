@@ -17,7 +17,7 @@ for (const arg of process.argv.slice(2)) {
 	if (arg === '-o') {
 		is_output_arg = true
 	}
-	if (arg === '-w') {
+	else if (arg === '-w') {
 		is_watcher_arg = true
 	}
 	else {
