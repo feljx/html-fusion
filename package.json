@@ -7,7 +7,7 @@
 		"fusion": "src/cli.js"
 	},
 	"scripts": {
-		"fusion": "node src/cli.js"
+		"test": "node src/cli.js -i test/_index.html -o test/index.html"
 	},
 	"repository": {
 		"type": "git",
@@ -31,5 +31,8 @@
 	"homepage": "https://github.com/flxsu/html-fusion#readme",
 	"dependencies": {
 		"chokidar": "^3.5.1"
+	},
+	"devDependencies": {
+		"ava": "^3.15.0"
 	}
 }
