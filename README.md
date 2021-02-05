@@ -5,9 +5,10 @@ Fuse multiple HTML files into one
 `npm i -D html-fusion`
 
 ## Usage
+### Normal mode
 `npx fusion <input_html> -o <output_html>`
 
-### Watch mode (fuse on file change)
+### Watch mode (watch and fuse on file change)
 `npx fusion <input_html> -o <output_html> -w <directory_to_watch>`
 
 ### Include other HTML files
