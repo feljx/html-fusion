@@ -8,6 +8,7 @@ const REFERENCE_PATH = 'test/reference.html'
 
 function minify_html (html) {
 	html = replace_all(' ', '', html)
+	html = replace_all('\t', '', html)
 	html = replace_all('\r', '', html)
 	html = replace_all('\n', '', html)
 	return html
