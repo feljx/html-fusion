@@ -19,11 +19,12 @@ For example, when including files from the same foler, you only need to specify 
 
 ```html
 <body>
-  <!-- Include multiple HTML files (in same folder or in nested folders) -->
+  <!-- Include multiple HTML files -->
+  <!-- E.g. from a nested folder or from the same folder -->
   {{
   components/title.html
   components/nav.html
-  another_file.html
+  button.html
   }}
   
   <!-- Single HTML include -->
