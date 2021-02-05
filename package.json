@@ -1,13 +1,14 @@
 {
 	"name": "html-fusion",
-	"version": "0.1.8",
+	"version": "0.1.9",
 	"description": "Fuse multiple HTML file into one",
 	"main": "src/main.js",
 	"bin": {
 		"fusion": "src/cli.js"
 	},
 	"scripts": {
-		"test": "node src/cli.js -i test/_index.html -o test/index.html"
+		"test": "node ./test/main.js",
+		"testfusion": "node src/cli.js -i test/_index.html -o test/index.html"
 	},
 	"repository": {
 		"type": "git",
@@ -33,6 +34,6 @@
 		"chokidar": "^3.5.1"
 	},
 	"devDependencies": {
-		"ava": "^3.15.0"
+		"zora": "^4.0.2"
 	}
 }

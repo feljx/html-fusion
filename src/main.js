@@ -1,9 +1,8 @@
 const { readFile, writeFile } = require('fs')
-const { dirname, sep } = require('path')
+const { dirname } = require('path')
+const replace_all = require('./replace_all')
 
 const DEFAULT_LINEBREAK = process.platform === 'win32' ? '\r\n' : '\n'
-const REGEX_CURLY = /({{)([\s\S][^{{]+)(}})/g
-const REGEX_INSERT = /(\s*)(?:(?:(\d)\s*\*\s*)?((?:\w|\/)+\.html))(\n|(?:\r\n))?/g
 
 function read_file (path) {
 	return new Promise((resolve, reject) => {
@@ -14,35 +13,58 @@ function read_file (path) {
 	})
 }
 
-// function really_normalize_path (path) {
-// 	const
-// }
+function really_normalize_path (path) {
+	const double_back = '\\\\'
+	const single_back = '\\'
+	const forward = '/'
+	return replace_all(single_back, forward, replace_all(double_back, forward, path))
+}
 
-async function EVOLVE (entry) {}
+async function EVOLVE (entry) {
+	entry = really_normalize_path(entry)
+}
 
 async function resolve (filepath) {
+	const regex_curly = /({{)([\s\S][^{{]+)(}})/g
+	const regex_insert = /(\s*)(?:(?:(\d)\s*\*\s*)?((?:\w|\/)+\.html))(\n|(?:\r\n))?/g
+	filepath = really_normalize_path(filepath)
 	let data = await read_file(filepath)
 	let match_curly
-	while ((match_curly = REGEX_CURLY.exec(data))) {
+	while ((match_curly = regex_curly.exec(data))) {
 		const length = match_curly[0].length
 		let inserts = match_curly[2]
 		let match_insert
-		while ((match_insert = REGEX_INSERT.exec(inserts))) {
+		while ((match_insert = regex_insert.exec(inserts))) {
 			const length = match_insert[0].length
 			const indent = match_insert[1]
-			const multiplier = Number(match_insert[2])
-			const has_multiplier = !isNaN(multiplier)
-			const html_path = dirname(filepath) + sep + match_insert[3]
+			// const multiplier = Number(match_insert[2])
+			// const has_multiplier = !isNaN(multiplier)
+			const insert = match_insert[3]
+			const insert_path = `${dirname(filepath)}/${insert}`
 			const linebreak_character = match_insert[4] || DEFAULT_LINEBREAK
-			console.log(filepath)
-			console.log(html_path)
-			let html_data = await resolve(html_path)
-			if (has_multiplier) {
-				let counter = multiplier
-				while (counter > 1) {
-					html_data += linebreak_character + html_data
-				}
-			}
+
+			// console.log('match_insert: ', match_insert)
+			// console.log('filepath: ', filepath)
+			// console.log('insert: ', insert)
+			// console.log('insert_path: ', insert_path)
+
+			let html_data = await resolve(insert_path)
+			// html_data = html_data
+			// 	.split(linebreak_character)
+			// 	.map((elm, idx, arr) => {
+			// 		if (idx === 0) return elm
+			// 		if (idx === arr.length - 1) return indent + elm + linebreak_character
+			// 		return indent + elm
+			// 	})
+			// 	.join(linebreak_character)
+
+			// if (has_multiplier) {
+			// 	let counter = multiplier
+			// 	while (counter > 1) {
+			// 		html_data += linebreak_character + html_data
+			// 	}
+			// }
+
 			const previous = inserts.slice(0, match_insert.index)
 			const next = inserts.slice(match_insert.index + length)
 			const possible_linebreak = next.trim() === '' ? '' : linebreak_character
@@ -66,4 +88,4 @@ async function create_output (path_in, path_out) {
 	}
 }
 
-module.exports = { create_output }
+module.exports = { create_output, resolve }
