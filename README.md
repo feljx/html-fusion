@@ -13,7 +13,8 @@ Fuse multiple HTML files into one
 
 ### Include other HTML files
 Include HTML files by listing their filepaths relative to the HTML file from which they are included.
-If you include an HTML file from the same folder, don't need to specify the folder, only the filename.
+For example, when including files from the same foler, you only need to specify a filename.
+*Don't use absolute paths, they are not supported.*
 
 ```html
 <body>
