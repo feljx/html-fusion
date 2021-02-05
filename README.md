@@ -6,10 +6,14 @@ Fuse multiple HTML files into one
 
 ## Usage
 `npx fusion <input_html> -o <output_html>`
-Watch for changes and fuse automatically
+
+### Watch mode (fuse on file change)
 `npx fusion <input_html> -o <output_html> -w <directory_to_watch>`
 
 ### Include other HTML files
+Include HTML files by listing their filepaths relative to the HTML file from which they are included.
+If you include an HTML file from the same folder, don't need to specify the folder, only the filename.
+
 ```html
 <body>
   <!-- Include multiple HTML files (in same folder or in nested folders) -->
@@ -33,4 +37,3 @@ Watch for changes and fuse automatically
 <nav>
 ```
 
-`
